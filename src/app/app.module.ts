@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { ProductComponent } from './components/product/product.component';
+import { InputFormatDirective } from './input-format.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PanelComponent,
-    ProductComponent
+    ProductComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,
