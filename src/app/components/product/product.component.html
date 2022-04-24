@@ -8,9 +8,17 @@
     No product to show
 </ng-template>
 -->
+
+<button (click)="loadProducts()">Load Porducts</button><br>
 <div [hidden]="products.length == 0">
-    List of products
+    <button (click)="onAdd()">Add Product</button>
+    <ul>
+        <li *ngFor="let product of products; trackBy: trackProduct">
+           {{product.label}} <button (click)="onRemove(product)" >Remove</button>
+        </li>
+    </ul>
 </div>
 <div [hidden]="products.length > 0">
+    
     No product to show
 </div>

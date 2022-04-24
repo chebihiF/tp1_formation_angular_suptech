@@ -1,5 +1,5 @@
 export interface Product{
-    ref:string,
+    id:number,
     label:string,
     price:number,
     qte:number
