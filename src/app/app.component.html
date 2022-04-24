@@ -6,5 +6,15 @@
     <p> some text ... </p>
   </ng-container>
 </app-panel>
--->
 <app-product></app-product>
+-->
+<ul class="nav nav-pills">
+  <li class="nav-item"><a class="nav-link" (click)="viewMode='map'" [class.active]="viewMode == 'map'">Map View</a></li>
+  <li class="nav-item"><a class="nav-link" (click)="viewMode='list'" [class.active]="viewMode == 'list'">List View</a></li>
+</ul>
+
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'" >Map View Content</div>
+  <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchDefault>Otherwise</div>
+</div>

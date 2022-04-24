@@ -1,3 +1,4 @@
+<!--
 <div *ngIf="products.length > 0; then productsList 
     else noProducts"></div>
 <ng-template #productsList>
@@ -6,12 +7,10 @@
 <ng-template #noProducts>
     No product to show
 </ng-template>
-
-<!--
-<div *ngIf="products.length > 0; else noProducts">
+-->
+<div [hidden]="products.length == 0">
     List of products
 </div>
-<div *ngIf="products.length == 0">
+<div [hidden]="products.length > 0">
     No product to show
 </div>
--->
